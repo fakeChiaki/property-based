@@ -1,5 +1,7 @@
 # property-based
 
+[![CI](https://github.com/fakeChiaki/property-based/actions/workflows/ci.yml/badge.svg)](https://github.com/fakeChiaki/property-based/actions/workflows/ci.yml)
+
 Sistema de gestión de **tareas** (CRUD en memoria) validado mediante **pruebas basadas en propiedades** (Property-Based Testing) con TypeScript, [fast-check](https://fast-check.dev/) y [Vitest](https://vitest.dev/).
 
 ## Pruebas basadas en propiedades

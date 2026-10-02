@@ -6,3 +6,7 @@ export function repositoryWith(inputs: CreateTaskInput[]): { repo: TaskRepositor
   const tasks = inputs.map((input) => repo.create(input));
   return { repo, tasks };
 }
+
+export function pick(tasks: Task[], index: number): Task {
+  return tasks[index % tasks.length]!;
+}

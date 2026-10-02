@@ -3,13 +3,9 @@ import { describe, expect, it } from 'vitest';
 import { TaskNotFoundError, ValidationError } from '../src/errors.js';
 import type { Task } from '../src/task.js';
 import { createInputArb, idArb, invalidUpdateInputArb, updateInputArb } from './arbitraries.js';
-import { repositoryWith } from './helpers.js';
+import { pick, repositoryWith } from './helpers.js';
 
 const nonEmptyInputsArb = fc.array(createInputArb, { minLength: 1, maxLength: 20 });
-
-function pick(tasks: Task[], index: number): Task {
-  return tasks[index % tasks.length]!;
-}
 
 describe('Update', () => {
   it('actualizar con cambios válidos aplica solo los campos indicados y conserva el id', () => {
